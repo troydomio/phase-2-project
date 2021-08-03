@@ -1,22 +1,20 @@
 import DataCard from './dataCard';
-import SearchBar from './searchBar';
+// import SearchBar from './searchBar';
 import Form from './form';
+import 'bootstrap/dist/css/bootstrap.css'
+import {Container, Row} from 'react-bootstrap'
 
 
 function DataContainer({destinations}) {
     return (
-        <div>
-            <SearchBar />
-            
-            {destinations.map(destination=>
-            // console.log(destination)
+        <Container>
+            <Row xs={3}>
+                {destinations.map(destination=>
                  <DataCard key={destination.id} destination={destination}/>
-                ) }
-           
-
-
-            <Form />
-        </div>
+                )}
+            </Row>
+           <Form />
+        </Container>
     )
 }
 
