@@ -3,11 +3,12 @@ import SearchBar from './searchBar';
 import Form from './form';
 
 
-function DataContainer() {
+function DataContainer({ destinations, setSearch }) {
     return (
         <div>
-            <SearchBar />
-            <DataCard />
+            <SearchBar setSearch={setSearch} />
+            {destinations.map((card) => <DataCard card={card} key={card.id} />)}
+
             <Form />
         </div>
     )
