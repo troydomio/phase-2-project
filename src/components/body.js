@@ -19,31 +19,24 @@ function Body(){
         <div className="body">
           
             <Container>
-            
                 <Row>
-                    
-                     <Col lg={{ span: 6, offset: 3 }}>
+                    <Col lg={{ span: 6, offset: 3 }}>
                          <SearchBar/>
-                    </Col>
-                    
-                </Row>
+                    </Col> 
+                 </Row>
                 
                 <Row style={{ textAlign:"center", paddingTop:"50px" }}>
-                    <Col xs={2}><Sidebar className="body-element" /></Col>
-                
-                    
-                 <Col><DataContainer className="body-element" destinations={destinations} />    
-                 </Col>    
+                    <Col xs={2}>
+                        <Sidebar className="body-element" />
+                    </Col>
+                    <Col>
+                        <DataContainer className="body-element"
+                        destinations={destinations} />    
+                    </Col>    
                   
-                   </Row>
-               
-                
-              </Container>
-            
-        
+                </Row>
+            </Container>
+        </div>   
+    )}
           
-        </div>
-    )
-}
-
 export default Body
