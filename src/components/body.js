@@ -1,6 +1,9 @@
 import DataContainer from './dataContainer';
 import Sidebar from './sidebar';
 import {useState, useEffect} from 'react'
+import 'bootstrap/dist/css/bootstrap.css'
+import {Container, Row, Col} from 'react-bootstrap'
+import SearchBar from './searchBar';
 
 
 function Body(){
@@ -14,9 +17,31 @@ function Body(){
 
     return(
         <div className="body">
-            <Sidebar className="body-element" />
-            <hr/>
-            <DataContainer className="body-element" destinations={destinations} />
+          
+            <Container>
+            
+                <Row>
+                    
+                     <Col lg={{ span: 6, offset: 3 }}>
+                         <SearchBar/>
+                    </Col>
+                    
+                </Row>
+                
+                <Row style={{ textAlign:"center", paddingTop:"50px" }}>
+                    <Col xs={2}><Sidebar className="body-element" /></Col>
+                
+                    
+                 <Col><DataContainer className="body-element" destinations={destinations} />    
+                 </Col>    
+                  
+                   </Row>
+               
+                
+              </Container>
+            
+        
+          
         </div>
     )
 }
