@@ -8,12 +8,17 @@ import SearchBar from './searchBar';
 
 function Body(){
     const [destinations, setDestinations] = useState([])
+    const [search, setSearch]= useState("")
 
     useEffect (()=>{
         fetch('http://localhost:3000/destinations')
        .then(r => r.json())
         .then(destinations => setDestinations(destinations) )
-      },[])
+    },[])
+
+    const searchItems = destinations.filter((card) => {
+        return card.name.toLowerCase().includes(search.toLowerCase())
+    })
 
     return(
         <div className="body">
@@ -21,7 +26,7 @@ function Body(){
             <Container>
                 <Row>
                     <Col lg={{ span: 6, offset: 3 }}>
-                         <SearchBar/>
+                         <SearchBar setSearch={setSearch} />
                     </Col> 
                  </Row>
                 
@@ -31,7 +36,7 @@ function Body(){
                     </Col>
                     <Col>
                         <DataContainer className="body-element"
-                        destinations={destinations} />    
+                        destinations={searchItems || destinations} />    
                     </Col>    
                   
                 </Row>

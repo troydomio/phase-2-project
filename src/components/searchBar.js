@@ -1,4 +1,9 @@
-function SearchBar() {
+function SearchBar({setSearch}) {
+
+    function handlechange(e){
+        setSearch(e.target.value)
+    }
+
     return (
         <div className="searchbar">
             <label htmlFor="search">Search Destination:</label>
@@ -6,7 +11,7 @@ function SearchBar() {
                 type="text"
                 id="search"
                 placeholder="Enter Name..."
-                // onChange={(e) => setSearch(e.target.value)}
+                onChange={handlechange}
             />
         </div>
     )
