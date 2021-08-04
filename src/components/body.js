@@ -10,14 +10,18 @@ import SearchBar from './searchBar';
 function Body(){
     const [destinations, setDestinations] = useState([])
     const [search, setSearch]= useState("")
+    const [buttons, setButtons]= useState([])
+   
     
+
     useEffect (()=>{
         fetch('http://localhost:3000/destinations')
        .then(r => r.json())
         .then(destinations => setDestinations(destinations))
     },[])
 
-    const [buttons, setButtons]= useState([])
+   
+   
 
     const searchItems = destinations.filter((card) => {
         return card.name.toLowerCase().includes(search.toLowerCase())

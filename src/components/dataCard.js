@@ -12,8 +12,8 @@ function DataCard({destination}) {
     }
     
     return (
-        <Card >
-            <Card.Img src={destination.image}/>
+        <Card className='mt-5'>
+            <Card.Img src={destination.image} />
             <Card.Title><h2>{destination.name}</h2></Card.Title>
             <p>{destination.location}</p>
            
