@@ -11,10 +11,14 @@ function DataContainer({destinations}) {
             <Row xs={3}>
                 {destinations.map(destination=>
                  <DataCard key={destination.id} destination={destination}/>
-                )}
+                )
+                
+                }
             </Row>
            <Form />
+           
         </Container>
+        
     )
 }
 
