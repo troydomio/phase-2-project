@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {Container, Row} from 'react-bootstrap'
 
 
-function DataContainer({destinations}) {
+function DataContainer({ destinations, addNewDestination }) {
     return (
         <Container>
             <Row xs={3}>
@@ -15,7 +15,7 @@ function DataContainer({destinations}) {
                 
                 }
             </Row>
-           <Form />
+            <Form addNewDestination={ addNewDestination } />
            
         </Container>
         
