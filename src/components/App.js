@@ -1,4 +1,4 @@
-import Header from './Header';
+
 import Body from './body';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import About from './About'
