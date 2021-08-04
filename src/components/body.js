@@ -7,6 +7,7 @@ import SearchBar from './searchBar';
 
 
 
+
 function Body(){
     const [destinations, setDestinations] = useState([])
     const [search, setSearch]= useState("")

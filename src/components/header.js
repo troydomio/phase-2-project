@@ -1,57 +1,31 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import {Navbar, NavbarBrand,Container,Row,Col, Nav,Carousel} from 'react-bootstrap'
-import image1 from './../assets/texas.jpg'
-import image2 from './../assets/yeah.jpg'
 
 
-
+import Navvbar from './Navvbar'
+import Carousell from './Carousell'
 
 function Header() {
     const logo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvvpheaMLN23qpDsoaOFAo9oT6Qp3m2LIcAg&usqp=CAU"
     return (
+     
         <>
-        <Navbar className="justify-content-center">
-            <Navbar.Brand>TravelTex</Navbar.Brand>
-            <Nav>
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">About</Nav.Link>
-                 <Nav.Link href="#pricing"></Nav.Link>
-          </Nav>
-        </Navbar>
-      <Carousel>
-      <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={image1}
-      alt="Second slide"
-    />
-     </Carousel.Item>
-     <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={image2}
-      alt="Second slide"
-    />
-     </Carousel.Item>
-      </Carousel>
-        
-
-        <Container>
-            
+      <Carousell/>
+         <Container>
             <Row >
                 <Col></Col>
                 <Col>
         <Navbar bg="mywhite" variant="light">
-        <Navbar.Brand href="#home">
-        <img
-          alt=""
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvvpheaMLN23qpDsoaOFAo9oT6Qp3m2LIcAg&usqp=CAU"
-          width="40"
-          height="65"
-          className="d-inline-block align-top"
+          <Navbar.Brand href="#home">
+          <img
+            alt=""
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvvpheaMLN23qpDsoaOFAo9oT6Qp3m2LIcAg&usqp=CAU"
+           width="40"
+           height="65"
+            className="d-inline-block align-top"
         />{' '}
       
-      </Navbar.Brand>
+          </Navbar.Brand>
           
             <Navbar.Brand>
             <h1>Places To Visit In Texas</h1> 
