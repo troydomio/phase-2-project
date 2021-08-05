@@ -31,20 +31,6 @@ const About = () => {
     
     return (
         <div>
-            <Carousel>
-                <Carousel.Item>
-                    <h1>{randText1}</h1>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <h1>{randText2}</h1>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <h1>{randText3}</h1>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <h1>{randText4}</h1>
-                </Carousel.Item>
-            </Carousel>
            
         <Container>
             <Row > 
@@ -75,7 +61,22 @@ const About = () => {
         </Col>
         <Col></Col>
         </Row>
-        </Container>
+        
+            <Carousel className="mt-5">
+                <Carousel.Item>
+                    <h1>{randText1}</h1>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <h1>{randText2}</h1>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <h1>{randText3}</h1>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <h1>{randText4}</h1>
+                </Carousel.Item>
+            </Carousel>
+            </Container>
         </div>
     )
 }
