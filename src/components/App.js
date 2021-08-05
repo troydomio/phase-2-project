@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import About from './About'
 import Navvbar from './Navvbar';
 import Home from './Home';
+import Form from './form';
 
 function App() {
   return (
@@ -15,9 +16,12 @@ function App() {
       <switch>
         <Route exact path="/"exact component={Home}/>
          <Route path ="/about" exact component={About}/>
-          {/* <Route path="/create" exact render={() => <Form  />} /> */}
-          {/* addNewDestination={addNewDestination} */}
-      </switch>
+
+
+         <Route path ="/create" exact render={()=><Form/>}/>
+        
+         </switch>
+
     </div>
     </Router>
   );

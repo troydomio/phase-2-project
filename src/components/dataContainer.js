@@ -16,11 +16,9 @@ function DataContainer({ destinations, addNewDestination }) {
                 }
             </Row>
             {/* <Form addNewDestination={ addNewDestination } /> */}
-            <Router>
-            <Switch>
-            <Route path="/create" exact render={() => <Form addNewDestination={addNewDestination} />} />
-            </Switch>
-            </Router>
+
+
+
            
         </Container>
         
