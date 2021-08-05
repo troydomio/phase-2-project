@@ -5,26 +5,26 @@ import image2 from './../assets/yeah.jpg'
 
 
 const Carousell = () => {
-    return (
-        <div>
-            <Carousel>
-      <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={image1}
-      alt="Second slide"
-    />
-     </Carousel.Item>
-     <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={image2}
-      alt="Second slide"
-    />
-     </Carousel.Item>
+  return (
+    <div>
+      <Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={image1}
+            alt="Second slide"
+          />
+          </Carousel.Item>
+          <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={image2}
+            alt="Second slide"
+          />
+        </Carousel.Item>
       </Carousel>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Carousell

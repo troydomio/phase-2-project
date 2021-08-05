@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -39,12 +39,12 @@
 
 .body {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
 }
 
 
 /* Troy's bootstrap CSS */
-.bg-mywhite{
+/* .bg-mywhite{
   background-color: white;
 }
 
@@ -58,4 +58,8 @@
 
 .navbar.transparent.navbar-inverse .navbar-inner {
   background: rgba(0,0,0,0.4);
+} */
+div.mt-5.card{
+  display: flex;
+  flex-flow: wrap;
 }

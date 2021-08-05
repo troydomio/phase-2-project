@@ -6,7 +6,6 @@ function Sidebar({ setButton, destinations }){
 
     function handleClick(e){
         const filteredData = destinations.filter(item => item.activity === e.target.textContent.toLowerCase())
-        // console.log(filteredData.length)
         setButton(filteredData)
     }
 
@@ -37,7 +36,7 @@ function Sidebar({ setButton, destinations }){
                 >Tours</Button>
                 <Button variant="outline-secondary" 
                     onClick={handleClick}
-                >shopping</Button>
+                >Shopping</Button>
                 <Button variant="outline-secondary" 
                     onClick={handleClick}
                 >Museums</Button>
