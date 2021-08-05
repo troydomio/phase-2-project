@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import {useHistory} from 'react-router-dom'
+import {Container, Row,Col,Button} from 'react-bootstrap'
 
 function Form({ addNewDestination }) {
     const history = useHistory()
@@ -47,10 +48,22 @@ function Form({ addNewDestination }) {
     }
 
     return (
-        <div className="new-form">
+        <Container className="formstyle"  >
+            <Row >
+                <Col className="mt-4">
+                <img src="https://i.pinimg.com/originals/9f/c6/96/9fc696fbc8fb4fb8229c095f788523f7.png"></img>
+                </Col>
+                <Col xs={7}>
+              
+        <div className="new-form" className="mt-4" >
+       
             <h2>Add New Destination</h2>
-            <form onSubmit={handleSubmit} >
+            
+            <Row>
+            <form onSubmit={handleSubmit} className="formstyle">
+                    <Row>
                 <input
+                    className="mt-2"
                     type="text"
                     placeholder="destination name"
                     name="name"
@@ -59,7 +72,10 @@ function Form({ addNewDestination }) {
                     // value={destinationForm.name}
                     // onChange={manageDestinationForm}
                 />
+                </Row>
+                <Row>
                 <input
+                className="mt-2"
                     type="text"
                     placeholder="Image URL"
                     name="image"
@@ -68,7 +84,10 @@ function Form({ addNewDestination }) {
                     // value={destinationForm.image}
                     // onChange={manageDestinationForm}
                 />
+                </Row>
+                <Row>
                 <input
+                className="mt-2"
                     type="text"
                     placeholder="location"
                     name="location"
@@ -77,7 +96,10 @@ function Form({ addNewDestination }) {
                     // value={destinationForm.location}
                     // onChange={manageDestinationForm}
                 />
+                </Row>
+                <Row>
                 <input
+                className="mt-2"
                     type="text"
                     placeholder="description"
                     name="description"
@@ -86,10 +108,76 @@ function Form({ addNewDestination }) {
                     // value={destinationForm.description}
                     // onChange={manageDestinationForm}
                 />
-                <button type="submit">Add Destination</button>
+                </Row>
+                <Row>
+                <Button className="mt-4 mb-5" type="submit">Add Destination</Button>
+                </Row>
             </form>
+            
+            </Row>
+           
         </div>
+        </Col>
+        <Col></Col>
+        </Row>
+         </Container>
     )
 }
 
 export default Form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////

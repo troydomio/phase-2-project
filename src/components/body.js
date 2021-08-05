@@ -40,8 +40,8 @@ function Body(){
     return(
         <div className="body">
             <Container>
-                <Row>
-                    <Col lg={{ span: 6, offset: 3 }}>
+                <Row xs={5}>
+                    <Col lg={{ span: 6, offset: 3 }} >
                          <SearchBar 
                          setSearch={setSearch}
                          />
