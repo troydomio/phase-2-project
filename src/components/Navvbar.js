@@ -8,6 +8,7 @@ const Navvbar = () => {
             <Navbar.Brand>TravelTex</Navbar.Brand>
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/create">New Destination</Nav.Link>
             <Nav>    
           </Nav>
         </Navbar>

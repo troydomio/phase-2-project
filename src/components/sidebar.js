@@ -2,34 +2,49 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {Button, Container, Row, Col} from 'react-bootstrap'
 
 
-function Sidebar({filter, filter2}){
+function Sidebar({ setButton, destinations }){
+
+    function handleClick(e){
+        const filteredData = destinations.filter(item => item.activity === e.target.textContent.toLowerCase())
+        // console.log(filteredData.length)
+        setButton(filteredData)
+    }
+
     return(
         <>
-       <Container> 
+        <Container> 
            <Row>  
                <Col xs={10}>
                    <h3> Pick An Activity</h3>
                </Col>    
-           </Row>
+            </Row>
            
-           <Row>
-           <Button variant="outline-secondary" 
-           onClick={()=>filter2('family')}>Family</Button>
-           <Button variant="outline-secondary" 
-           onClick={()=>filter('park')}>Parks</Button>
-            <Button variant="outline-secondary" 
-           onClick={()=>filter2('hiking')}>Hiking</Button>
-           <Button variant="outline-secondary" 
-           onClick={()=>filter('beach')}>Beaches</Button>
-           <Button variant="outline-secondary" 
-           onClick={()=>filter('tour')}>Tours</Button>
-           <Button variant="outline-secondary" 
-           onClick={()=>filter('shopping center')}>shopping</Button>
-           <Button variant="outline-secondary" 
-           onClick={()=>filter('museum')}>Museums</Button>
-           <Button variant="outline-secondary" 
-           onClick={()=>filter('landmark')}>Landmarks</Button>
-         </Row>
+            <Row>
+                <Button variant="outline-secondary" 
+                    onClick={handleClick}
+                >Family</Button>
+                <Button variant="outline-secondary" 
+                    onClick={handleClick}
+                >Parks</Button>
+                <Button variant="outline-secondary" 
+                    onClick={handleClick}
+                >Hiking</Button>
+                <Button variant="outline-secondary" 
+                    onClick={handleClick}
+                >Beaches</Button>
+                <Button variant="outline-secondary" 
+                    onClick={handleClick}
+                >Tours</Button>
+                <Button variant="outline-secondary" 
+                    onClick={handleClick}
+                >shopping</Button>
+                <Button variant="outline-secondary" 
+                    onClick={handleClick}
+                >Museums</Button>
+                <Button variant="outline-secondary" 
+                    onClick={handleClick}
+                >Landmarks</Button>
+            </Row>
        </Container> 
         </>
     )

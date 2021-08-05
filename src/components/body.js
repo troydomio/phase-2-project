@@ -11,7 +11,7 @@ import SearchBar from './searchBar';
 function Body(){
     const [destinations, setDestinations] = useState([])
     const [search, setSearch]= useState("")
-    const [buttons, setButtons]= useState([])
+    const [button, setButton]= useState([])
    
     
 
@@ -27,15 +27,6 @@ function Body(){
     const searchItems = destinations.filter((card) => {
         return card.name.toLowerCase().includes(search.toLowerCase())
     })
-
-    const filter = (button) => {
-        const filteredData = destinations.filter(item => item.activity1 === button);
-        setDestinations(filteredData)
-    }
-    const filter2 = (button) => {
-        const filteredData = destinations.filter(item => item.activity2 === button);
-        setDestinations(filteredData)
-    }
 
     function addNewDestination(newDestination) {
         fetch('http://localhost:3000/destinations',{
@@ -60,13 +51,13 @@ function Body(){
                 <Row style={{ textAlign:"center", paddingTop:"50px" }}>
                     <Col xs={2}>
                         <Sidebar className="body-element" 
-                        filter={filter}
-                        filter2={filter2}
+                            setButton={setButton}
+                            destinations={destinations}
                         />
                     </Col>
                     <Col>
                         <DataContainer className="body-element"
-                            destinations={searchItems || destinations} 
+                            destinations={button.length >= 1 ? button : (searchItems || destinations)} 
                             addNewDestination={addNewDestination}
                         />    
                     </Col>    
